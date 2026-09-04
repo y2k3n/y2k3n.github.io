@@ -39,14 +39,16 @@
 
   html.body({
     html.header(class: "site-header", {
-      html.div(class: if node.id == site.id {
-        ("header-inner", "home-header")
-      } else {
-        "header-inner"
-      }, {
-        if node.id != site.id {
-          html.a(class: "site-name", href: node.links.at(site.id), site.page.title)
-        }
+      html.div(class: "header-inner", {
+        html.a(
+          class: if node.id == site.id {
+            ("site-name", "home-site-name")
+          } else {
+            "site-name"
+          },
+          href: node.links.at(site.id),
+          site.page.title,
+        )
         html.nav(class: "site-nav", {
           let items = (site,) + site.children
           items.map(item => nav-link(node, item)).join()

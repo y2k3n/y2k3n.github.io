@@ -1,4 +1,5 @@
 :root {
+  --page-background: #fff;
   --font-sans-fallback: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
     "Segoe UI", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
   --font-serif-fallback: ui-serif, "Source Han Serif SC", "Noto Serif CJK SC",
@@ -17,6 +18,7 @@ body {
   max-width: 44rem;
   margin: 2rem auto;
   padding: 0 1rem;
+  background-color: var(--page-background);
   color: #222;
   line-height: 1.5;
   font-family: var(--font-sans);
@@ -36,13 +38,13 @@ a {
   gap: 1rem;
 }
 
-.home-header {
-  justify-content: flex-end;
-}
-
 .site-name {
   font-weight: 700;
   text-decoration: none;
+}
+
+.home-site-name {
+  color: var(--page-background);
 }
 
 .site-nav {
@@ -112,16 +114,7 @@ h2 {
     display: block;
   }
 
-  .home-header {
-    display: flex;
-  }
-
   .site-nav {
     margin-top: 0.5rem;
   }
-
-  .home-header .site-nav {
-    margin-top: 0;
-  }
-
 }
