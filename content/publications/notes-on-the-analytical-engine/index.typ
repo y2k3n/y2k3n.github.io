@@ -7,7 +7,7 @@
     = Abstract
 
     This sample page demonstrates that a publication uses exactly the same
-    representation and renderer as every other page.
+    representation and renderer as every other page. 
 
     #link("supplement.txt")[Download the local supplement].
   ],

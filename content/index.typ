@@ -9,8 +9,8 @@
 
     = About this site
 
-    Every page on this site is an `index.typ` file. The hierarchies and the
-    navigation are generated solely from the surrounding directory structure.
+    Every page on this site is an `index.typ` file. The hierarchies and
+    navigations are generated solely from the surrounding directory structure.
 
     // You can reach me at #link("mailto:ada@example.org")[#text("ada@example.org")].
   ],
