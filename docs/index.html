@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="generator" content="directory-typst-ssg">
+    <meta name="description" content="A small academic homepage generated from Typst content.">
+    <title>Ada Lovelace</title>
+    <link rel="stylesheet" href="_assets/style.css">
+    <style>
+      /* Alignment */
+      mtable.right-align mtd,
+      mtable mtd.right-align,
+      mtable.left-align mtd.right-align,
+      mtable.aligned mtd:nth-child(odd) {
+        justify-items: end;
+        text-align: right;
+      }
+      mtable.cases mtd,
+      mtable.left-align mtd,
+      mtable mtd.left-align,
+      mtable.aligned mtd:nth-child(even),
+      math:is(:not([display])) > mtable.multiline-equation mtd {
+        justify-items: start;
+        text-align: left;
+      }
+      mtable.cases mtd,
+      mtable.aligned mtd,
+      mtable mtd.flushed,
+      mtable mtd.left-flush {
+        padding-left: 0;
+      }
+      mtable.cases mtd,
+      mtable.aligned mtd,
+      mtable mtd.flushed,
+      mtable mtd.right-flush {
+        padding-right: 0;
+      }
+      
+      /* Tables */
+      mtable {
+        math-style: inherit;
+      }
+      mtd {
+        math-depth: auto-add;
+        math-style: compact;
+        math-shift: compact;
+      }
+      
+      /* Equations */
+      mtable.multiline-equation mtd {
+        math-depth: inherit;
+        math-style: inherit;
+        math-shift: inherit;
+        padding: 0;
+      }
+      math > mtable.multiline-equation mtr:not(:last-child) mtd {
+        padding-bottom: 0.5em;
+      }
+      
+      /* Fractions */
+      mfrac {
+        padding-inline: 0;
+        margin-inline: 0.1em;
+      }
+      
+      /* Accents */
+      mover[accent="true" i] > :first-child {
+        font-feature-settings: "dtls";
+      }
+      mover.dotted[accent="true" i] > :first-child {
+        font-feature-settings: "dtls" 0;
+      }
+      
+      /* Other rules for scriptlevel, displaystyle and math-shift */
+      munder > :nth-child(2),
+      munderover > :nth-child(2) {
+        math-shift: compact
+      }
+      munder[accentunder="true" i] > :not(:first-child),
+      mover[accent="true" i] > :not(:first-child) {
+        math-depth: inherit;
+        math-style: inherit;
+        math-shift: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner home-header">
+        <nav class="site-nav"><a href="./" class="active">Home</a><a href="publications/">Publications</a><a href="research/">Research</a></nav>
+      </div>
+    </header>
+    <main class="page-shell">
+      <article class="page-content">
+        <h1>Ada Lovelace</h1>
+        <p>I study programming languages, scientific computing, and the ways notation shapes how people think about machines.</p>
+        <p>I am currently working at the imaginary <strong>Analytical Engine Institute</strong>.</p>
+        <h2>About this site</h2>
+        <p>Every page on this site is an <code>index.typ</code> file. The hierarchies and the navigation are generated solely from the surrounding directory structure.</p>
+      </article>
+      <section class="children">
+        <h2>Pages</h2>
+        <ul>
+          <li>
+            <p><a href="publications/">Publications</a> — Selected papers and technical writing.</p>
+          </li>
+          <li>
+            <p><a href="research/">Research</a> — Current research themes and ongoing projects.</p>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <p class="updated">Last updated <time datetime="2026-09-04">2026-09-04</time>. Typeset with <a href="https://typst.app/">Typst</a>.</p>
+    </footer>
+  </body>
+</html>

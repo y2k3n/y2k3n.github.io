@@ -1,0 +1,5 @@
+# docs/
+.ssg/
+.ssg-build-*/
+__pycache__/
+# backups/

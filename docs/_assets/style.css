@@ -1,0 +1,127 @@
+:root {
+  --font-sans-fallback: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+  --font-serif-fallback: ui-serif, "Source Han Serif SC", "Noto Serif CJK SC",
+    Georgia, "Times New Roman", serif;
+  --font-mono-fallback: ui-monospace, "SFMono-Regular", Consolas, "Liberation Mono",
+    "Noto Sans Mono CJK SC", monospace;
+  --font-math-fallback: "STIX Two Math", "Cambria Math", "Noto Sans Math", math;
+  --font-sans: var(--font-sans-fallback);
+  --font-serif: var(--font-serif-fallback);
+  --font-mono: var(--font-mono-fallback);
+  --font-math: var(--font-math-fallback);
+  --font-prose: var(--font-sans);
+}
+
+body {
+  max-width: 44rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  color: #222;
+  line-height: 1.6;
+  font-family: var(--font-sans);
+}
+
+a {
+  color: inherit;
+}
+
+.site-header {
+  margin-bottom: 3rem;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.home-header {
+  justify-content: flex-end;
+}
+
+.site-name {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.site-nav .active {
+  font-weight: 700;
+}
+
+.page-content {
+  font-family: var(--font-prose);
+}
+
+.page-content :is(h1, h2, h3, h4, h5, h6, table, figcaption) {
+  font-family: var(--font-sans);
+}
+
+.page-content blockquote {
+  font-family: var(--font-serif);
+}
+
+.page-content :is(code, pre, kbd, samp) {
+  font-family: var(--font-mono);
+}
+
+.page-content math {
+  font-family: var(--font-math);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+h2 {
+  margin-top: 2rem;
+  font-size: 1.25rem;
+}
+
+/* .children {
+  margin-top: 3rem;
+}
+
+.children li {
+  margin: 0.5rem 0;
+} */
+
+.site-footer {
+  margin-top: 3rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #ccc;
+  color: #888;
+  font-size: 0.75rem;
+  line-height: 1.6;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+@media (max-width: 36rem) {
+  .header-inner {
+    display: block;
+  }
+
+  .home-header {
+    display: flex;
+  }
+
+  .site-nav {
+    margin-top: 0.5rem;
+  }
+
+  .home-header .site-nav {
+    margin-top: 0;
+  }
+
+}
