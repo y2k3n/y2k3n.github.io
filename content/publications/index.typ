@@ -1,6 +1,6 @@
 #let page = (
   title: "Publications",
-  description: "Selected papers and technical writing.",
+  description: "Academic and technical writings.",
   body: [
     Publications are ordinary child nodes. The generator has no special concept
     of papers, collections, years, or bibliographies.

@@ -52,5 +52,57 @@ generated `assets/theme/` namespace is reserved for theme styles and fonts.
 
 ## Custom fonts
 
-Fonts are managed by the Typst theme.
-See the [web font guide](theme/assets/fonts/_README.md) for details.
+Fonts are managed by the Typst theme. See the
+[web font guide](theme/assets/fonts/_README.md) for details.
+
+## Controlling HTML layout and styles
+
+Typst's HTML export is still experimental. Commands such as `#align(right)[...]`
+and `#text(size: ...)[...]` may be ignored during an HTML build.
+
+For HTML-specific formatting, create an HTML element explicitly and give it an
+inline style:
+
+```typst
+#html.div(style: "text-align: right; font-size: 0.9rem; line-height: 1.45;")[
+  _Student \
+  Department \
+  University_
+]
+```
+
+For styles used in more than one place, prefer a class in the Typst source:
+
+```typst
+#html.div(class: "education")[
+  Education details
+]
+```
+
+and define its appearance in `theme/assets/style.css`:
+
+```css
+.education {
+  text-align: right;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+```
+
+Small reusable helpers can keep content files concise:
+
+```typst
+#let align-right(body) = html.div(class: "align-right", body)
+#let small(body) = html.span(class: "small", body)
+
+#align-right[Right-aligned content]
+#small[Smaller inline content]
+```
+
+This project enables the Typst `html` and `bundle` features during the build, so
+the `html.*` functions can be used directly in content pages. A raw string
+containing HTML is not interpreted as markup; use structured elements such as
+`html.div`, `html.span`, `html.p`, and `html.elem` instead.
+
+For equations or diagrams that require Typst's exact visual layout, `html.frame`
+can render a small region as inline SVG.
