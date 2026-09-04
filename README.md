@@ -19,6 +19,10 @@ python3 ssg.py build --keep-entry  # optionally inspect .ssg/site.typ
 python3 -m http.server --directory docs 8000
 ```
 
+Each build also writes `docs/.nojekyll`, so GitHub Pages can publish the
+prebuilt `docs/` directory without running Jekyll. For branch-based Pages
+deployment, select the repository branch and `/docs` as the publishing source.
+
 ## Content convention
 
 Every directory containing an `index.typ` file is a public content node. Its URL
@@ -43,9 +47,10 @@ Each `index.typ` exports one `page` dictionary:
 ```
 
 All non-Typst files below `content/` are copied to the same relative location in
-the output. Files and directories beginning with `_` or `.` are private.
+the output. Files and directories beginning with `_` or `.` are private. The
+generated `assets/theme/` namespace is reserved for theme styles and fonts.
 
 ## Custom fonts
 
 Fonts are managed by the Typst theme.
-See the [web font guide](theme/assets/fonts/_README.md) for details.
+See the [web font guide](theme/assets/fonts/README.md) for details.

@@ -6,7 +6,7 @@
   // (
   //   family: "Site Font",
   //   source: "/theme/assets/fonts/site-regular.woff2",
-  //   output: "_assets/fonts/site-regular.woff2",
+  //   output: "assets/theme/fonts/site-regular.woff2",
   //   url: "fonts/site-regular.woff2",
   //   format: "woff2",
   //   weight: 400,
@@ -59,7 +59,8 @@
 #let stylesheet = font-css + read("/theme/assets/style.css") + role-css
 
 #let emit-theme-assets() = {
-  asset("_assets/style.css", stylesheet)
+  asset(".nojekyll", "")
+  asset("assets/theme/style.css", stylesheet)
   for font in fonts {
     asset(font.output, read(font.source, encoding: none))
   }

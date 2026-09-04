@@ -50,7 +50,7 @@ class DiscoveryTests(unittest.TestCase):
             self.assertIn('#document("research/index.html"', entry)
             self.assertIn('#import "/theme/style.typ": emit-theme-assets', entry)
             self.assertIn("#emit-theme-assets()", entry)
-            self.assertIn('asset-prefix: "../_assets/"', entry)
+            self.assertIn('root-prefix: "../"', entry)
             self.assertIn('page_0: "../"', entry)
             self.assertNotIn("updated-display:", entry)
             self.assertNotIn("  output:", entry)

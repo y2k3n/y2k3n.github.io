@@ -31,7 +31,10 @@
       html.meta(name: "description", content: page.description)
     }
     html.title(document-title)
-    html.link(rel: "stylesheet", href: node.asset-prefix + "style.css")
+    html.link(
+      rel: "stylesheet",
+      href: node.root-prefix + "assets/theme/style.css",
+    )
   })
 
   html.body({

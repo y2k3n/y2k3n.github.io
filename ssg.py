@@ -121,7 +121,7 @@ def generate_entry(project_root: Path, theme_file: Path, root: Node, nodes: list
             f'{target.alias}: {typst_string(relative_href(node, target))}'
             for target in nodes
         ]
-        asset_prefix = "../" * len(node.parts) + "_assets/"
+        root_prefix = "../" * len(node.parts)
         updated = node.updated
         updated_date = updated.date().isoformat()
         lines.extend(
@@ -129,7 +129,7 @@ def generate_entry(project_root: Path, theme_file: Path, root: Node, nodes: list
                 f"#let node_{node.alias} = (",
                 f'  id: {typst_string(node.alias)},',
                 f'  route: {typst_string(node.route)},',
-                f'  asset-prefix: {typst_string(asset_prefix)},',
+                f'  root-prefix: {typst_string(root_prefix)},',
                 f'  updated: {typst_string(updated_date)},',
                 f"  page: {node.alias}.page,",
                 f"  links: {render_tuple(links, 2)},",

@@ -25,7 +25,7 @@ Then configure their faces:
   (
     family: "Site Font",
     source: "/theme/assets/fonts/site-regular.woff2",
-    output: "_assets/fonts/site-regular.woff2",
+    output: "assets/theme/fonts/site-regular.woff2",
     url: "fonts/site-regular.woff2",
     format: "woff2",
     weight: 400,
@@ -34,7 +34,7 @@ Then configure their faces:
   (
     family: "Site Font",
     source: "/theme/assets/fonts/site-bold.woff2",
-    output: "_assets/fonts/site-bold.woff2",
+    output: "assets/theme/fonts/site-bold.woff2",
     url: "fonts/site-bold.woff2",
     format: "woff2",
     weight: 700,
@@ -48,7 +48,7 @@ fields have the following meanings:
 
 - `source`: Project-root-relative path read by Typst.
 - `output`: Destination path in the generated bundle.
-- `url`: URL relative to `docs/_assets/style.css`; it must refer to the same
+- `url`: URL relative to `docs/assets/theme/style.css`; it must refer to the same
   file as `output`.
 - `format`: CSS font format, such as `woff2`, `woff`, `truetype`, or `opentype`.
 - `weight`: CSS weight from 1 to 1000, normally 400 for regular and 700 for bold.
@@ -85,9 +85,9 @@ During a build, Typst:
 
 1. Generates one `@font-face` rule per configured face.
 2. Combines those rules with `theme/assets/style.css`.
-3. Writes the result to `docs/_assets/style.css`.
+3. Writes the result to `docs/assets/theme/style.css`.
 4. Writes the fonts to their configured bundle paths, normally
-   `docs/_assets/fonts/`.
+   `docs/assets/theme/fonts/`.
 
 If `fonts` is empty and all roles are `none`, no fonts are bundled and the site
 uses its system fallback stacks. Only bundle fonts whose licenses permit web
