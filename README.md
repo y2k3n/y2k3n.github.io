@@ -53,4 +53,4 @@ generated `assets/theme/` namespace is reserved for theme styles and fonts.
 ## Custom fonts
 
 Fonts are managed by the Typst theme.
-See the [web font guide](theme/assets/fonts/README.md) for details.
+See the [web font guide](theme/assets/fonts/_README.md) for details.
