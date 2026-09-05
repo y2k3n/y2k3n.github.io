@@ -5,8 +5,8 @@
     #html.div(style: "display: flex;")[
       #html.div(style: "width: 50%; font-size: 0.9rem; line-height: 1.44;")[
         _PhD Student \
-        Department of Computer Science and Engineering \
-        Hong Kong University of Science and Technology_
+        #link("https://cse.hkust.edu.hk/")[Department of Computer Science and Engineering] \
+        #link("https://hkust.edu.hk/")[Hong Kong University of Science and Technology]_
       ]
       #html.div(style: "width: 50%; text-align: right;")[
         #link("mailto:ywangvz@cse.ust.hk")[#text("ywangvz@cse.ust.hk")] \
@@ -20,8 +20,8 @@
 
     I am a 1#super[st] year PhD student advised by #link(
       "https://shenjiasi.com/",
-    )[Prof. Jiasi Shen]. I am interested in programming languages and software
-    engineering.
+    )[Prof. Jiasi Shen]. I am interested in Programming Languages and Software
+    Engineering.
 
     // = About this site
 
