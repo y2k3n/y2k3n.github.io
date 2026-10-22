@@ -40,11 +40,15 @@ Each `index.typ` exports one `page` dictionary:
 #let page = (
   title: "Page title",
   description: "Optional description",
+  google-site-verification: "Optional Google Search Console token",
   body: [
     Ordinary *Typst content* goes here.
   ],
 )
 ```
+
+The optional `description` and `google-site-verification` fields are emitted as
+`<meta>` tags in the document head.
 
 All non-Typst files below `content/` are copied to the same relative location in
 the output. Files and directories beginning with `_` or `.` are private. The
