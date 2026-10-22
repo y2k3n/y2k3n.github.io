@@ -30,6 +30,12 @@
     if "description" in page {
       html.meta(name: "description", content: page.description)
     }
+    if "google-site-verification" in page {
+      html.meta(
+        name: "google-site-verification",
+        content: page.google-site-verification,
+      )
+    }
     html.title(document-title)
     html.link(
       rel: "stylesheet",

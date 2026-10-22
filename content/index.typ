@@ -1,6 +1,7 @@
 #let page = (
   title: "Yikun Wang",
   description: "A simple academic homepage generated from Typst pages.",
+  google-site-verification: "3_gGIJkwGmTf5zewc2963R-qK4UOlyO5FgXQJ4wDVdA",
   body: [
     #html.div(style: "display: flex;")[
       #html.div(style: "width: 50%; font-size: 0.9rem; line-height: 1.44;")[
