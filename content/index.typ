@@ -21,8 +21,8 @@
 
     I am a 1#super[st] year PhD student advised by #link(
       "https://shenjiasi.com/",
-    )[Prof. Jiasi Shen]. I am interested in Programming Languages and Software
-    Engineering.
+    )[Prof. Jiasi Shen]. I am interested in programming languages and software
+    engineering, as well as human languages.
 
     // = About this site
 
